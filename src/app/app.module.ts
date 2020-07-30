@@ -9,13 +9,14 @@ import { ProductDetails } from './components/ProductDetails/productDetails.compo
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductDetails
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
         { path: '', component: AppComponent },
-        { path: 'products/', component: ProductDetails },
+        { path: 'products', component: ProductDetails },
       ])
   ],
   providers: [],
