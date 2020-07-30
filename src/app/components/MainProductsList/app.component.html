@@ -317,6 +317,15 @@
 
 <div class="content" role="main">
 
+  <button (click)="onGoToNextScreen()">Go To Next Screen</button>
+  <div *ngFor="let product of products; index as productId">
+    <h3>
+      <a [title]="product.name + ' details'" [routerLink]="['/products']">
+        {{ product.name }}
+      </a>
+    </h3>
+  </div>
+
   <!-- Highlight Card -->
   <div class="card highlight-card card-small">
 
@@ -340,7 +349,7 @@
 
   <!-- Resources -->
   <h2>Resources</h2>
-  <p>Here are some links to help you get started:</p>
+  <p>{{ resourcesDescription }}</p>
 
   <div class="card-container">
     <a class="card" target="_blank" rel="noopener" href="https://angular.io/tutorial">
